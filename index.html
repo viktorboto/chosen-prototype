@@ -518,6 +518,178 @@
 
   .helper{font-size:12px;color:var(--ink-faint);margin-top:7px;line-height:1.5;}
 
+  /* ============================================================
+     v2 ADDITIONS — chat · gifts · memories · rings · education
+     ============================================================ */
+
+  /* tab bar tightened for 6 tabs */
+  .tabbar{padding:10px 3px 0;}
+  .tab{font-size:9.5px;gap:3px;}
+  .tab svg{width:21px;height:21px;}
+  .tab span{white-space:nowrap;}
+
+  .mini-av{border-radius:50%;display:inline-flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-family:var(--sans);flex:none;}
+
+  /* ===== Circle rings (home) ===== */
+  .rings-head{display:flex;align-items:baseline;justify-content:space-between;margin:6px 2px 0;}
+  .rings-head .t{font-family:var(--serif);font-size:20px;color:var(--navy);}
+  .rings-head .s{font-size:11px;color:var(--ink-faint);font-weight:600;}
+  .rings{position:relative;width:100%;max-width:296px;margin:8px auto 4px;aspect-ratio:1;}
+  .rings svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible;}
+  .ring-av{position:absolute;transform:translate(-50%,-50%);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700;font-family:var(--sans);border:2px solid var(--paper);box-shadow:var(--shadow-sm);cursor:pointer;transition:transform .14s;z-index:2;}
+  .ring-av:active{transform:translate(-50%,-50%) scale(.85);}
+  .ring-sd{position:absolute;right:-1px;bottom:-1px;width:9px;height:9px;border-radius:50%;border:1.5px solid var(--paper);}
+  .ring-you{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:58px;height:58px;border-radius:50%;background:linear-gradient(150deg,var(--sage),var(--sage-deep));color:#fff;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-size:15px;font-weight:600;box-shadow:0 8px 20px rgba(94,149,127,.45);cursor:pointer;z-index:3;}
+  .ring-legend{display:flex;gap:8px;margin:8px auto 2px;max-width:320px;}
+  .ring-legend .rl{flex:1;text-align:center;background:var(--card);border:1px solid var(--line);border-radius:13px;padding:9px 4px;font-size:10.5px;color:var(--ink-soft);font-weight:600;cursor:pointer;box-shadow:var(--shadow-sm);transition:.14s;letter-spacing:.3px;}
+  .ring-legend .rl:active{transform:scale(.96);}
+  .ring-legend .rl b{display:block;font-family:var(--serif);font-size:19px;color:var(--navy);font-weight:600;margin-bottom:2px;}
+
+  /* ===== Chat ===== */
+  .thread-row{display:flex;align-items:center;gap:13px;padding:12px 14px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow-sm);margin-bottom:10px;cursor:pointer;transition:.14s;}
+  .thread-row:active{transform:scale(.99);}
+  .thread-row .gtile{width:50px;height:50px;border-radius:15px;display:flex;align-items:center;justify-content:center;font-size:24px;flex:none;color:#fff;}
+  .thread-row .info{flex:1;min-width:0;}
+  .thread-row .nm{font-size:15px;font-weight:600;color:var(--navy);}
+  .thread-row .lastmsg{font-size:12.5px;color:var(--ink-soft);margin-top:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .thread-row .when{font-size:11px;color:var(--ink-faint);font-weight:600;flex:none;align-self:flex-start;margin-top:2px;}
+  .chat-hero{display:flex;align-items:center;gap:14px;padding:16px;border-radius:var(--radius);background:linear-gradient(150deg,#12345d,#0d1f3c);color:#fff;margin-bottom:14px;cursor:pointer;box-shadow:var(--shadow-md);}
+  .chat-hero .gtile{width:54px;height:54px;border-radius:16px;background:rgba(255,255,255,.13);display:flex;align-items:center;justify-content:center;font-size:26px;flex:none;}
+  .chat-hero .nm{font-family:var(--serif);font-size:19px;}
+  .chat-hero .sub{font-size:12px;color:#AEBBCF;margin-top:3px;}
+  .chat-hero .mini-row{display:flex;margin-top:9px;}
+  .chat-hero .mini-row .mini-av{margin-right:-7px;border:2px solid #12345d;}
+  .thread-new{display:flex;align-items:center;gap:9px;justify-content:center;border:1.5px dashed var(--line);border-radius:14px;padding:13px;color:var(--sage-deep);font-weight:600;font-size:13.5px;cursor:pointer;margin-bottom:6px;background:rgba(127,181,160,.05);transition:.14s;}
+  .thread-new:active{transform:scale(.99);}
+  .thread-title{flex:1;text-align:center;font-family:var(--serif);font-size:18px;color:var(--navy);cursor:pointer;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding:0 6px;}
+  .chat-log{flex:1;overflow-y:auto;overflow-x:hidden;padding:14px 16px 10px;display:flex;flex-direction:column;-webkit-overflow-scrolling:touch;}
+  .chat-log::-webkit-scrollbar{width:0;}
+  .chat-empty{margin:auto;text-align:center;color:var(--ink-faint);font-size:13.5px;line-height:1.5;}
+  .chat-empty svg{width:40px;height:40px;color:var(--line);margin-bottom:8px;}
+  .bubrow{display:flex;flex-direction:column;margin-bottom:8px;max-width:80%;}
+  .bubrow.out{align-self:flex-end;align-items:flex-end;}
+  .bubrow.in{align-self:flex-start;align-items:flex-start;}
+  .bub-sender{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--ink-faint);font-weight:600;margin:0 0 3px 4px;}
+  .bubble{padding:10px 14px;border-radius:18px;font-size:14px;line-height:1.4;position:relative;word-break:break-word;}
+  .bubble.in{background:#fff;border:1px solid var(--line);color:var(--ink);border-bottom-left-radius:6px;}
+  .bubble.out{background:var(--navy);color:#fff;border-bottom-right-radius:6px;}
+  .bub-when{display:block;font-size:9.5px;opacity:.55;margin-top:4px;text-align:right;}
+  .bubble.in .bub-when{color:var(--ink-faint);}
+  .bub-gift{display:flex;align-items:center;gap:11px;}
+  .bub-gift .bg-thumb{width:42px;height:42px;border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:22px;flex:none;}
+  .bub-gift .bg-name{font-weight:700;font-size:13.5px;}
+  .bub-gift .bg-sub{font-size:11.5px;opacity:.75;margin-top:2px;}
+  .bub-mem{border-radius:13px;overflow:hidden;width:172px;height:118px;display:flex;flex-direction:column;justify-content:flex-end;padding:11px;}
+  .bub-mem .bm-emoji{font-size:30px;margin-bottom:auto;}
+  .bub-mem .bm-cap{font-size:12px;color:#fff;font-weight:600;text-shadow:0 1px 4px rgba(0,0,0,.35);}
+  .composer{flex:none;display:flex;align-items:center;gap:9px;padding:11px 14px 22px;border-top:1px solid var(--line);background:var(--paper);}
+  .composer-add{width:40px;height:40px;border-radius:50%;border:none;background:var(--sage-wash);color:var(--sage-deep);display:flex;align-items:center;justify-content:center;cursor:pointer;flex:none;transition:.14s;}
+  .composer-add:active{transform:scale(.9);}
+  .composer-add svg{width:22px;height:22px;}
+  .composer-input{flex:1;border:1px solid var(--line);border-radius:22px;padding:11px 16px;font-size:14.5px;font-family:var(--sans);outline:none;background:#fff;}
+  .composer-input:focus{border-color:var(--sage);}
+  .composer-send{width:40px;height:40px;border-radius:50%;border:none;background:var(--sage);color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;flex:none;box-shadow:0 4px 12px rgba(127,181,160,.4);transition:.14s;}
+  .composer-send:active{transform:scale(.92);}
+  .composer-send svg{width:19px;height:19px;}
+
+  /* group profile */
+  .member-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px 6px;}
+  .member{text-align:center;cursor:pointer;}
+  .member .avatar{margin:0 auto;}
+  .member .mn{font-size:11px;color:var(--ink-soft);margin-top:6px;font-weight:600;}
+
+  /* ===== Gift flow overlay ===== */
+  #giftflow{position:absolute;inset:0;z-index:95;background:var(--paper);border-radius:42px;display:none;flex-direction:column;}
+  #giftflow.show{display:flex;animation:fade .3s ease both;}
+  .gf-head{flex:none;display:flex;align-items:center;gap:8px;padding:54px 18px 6px;}
+  .gf-back,.gf-x{width:38px;height:38px;border-radius:50%;border:none;background:#F1EFE9;color:var(--ink-soft);cursor:pointer;display:flex;align-items:center;justify-content:center;flex:none;font-size:16px;}
+  .gf-back svg{width:20px;height:20px;}
+  .gf-title{flex:1;text-align:center;font-family:var(--serif);font-size:19px;color:var(--navy);}
+  .gf-steps{flex:none;display:flex;gap:6px;justify-content:center;padding:4px 0 8px;}
+  .gf-steps i{width:22px;height:4px;border-radius:3px;background:var(--line);}
+  .gf-steps i.on{background:var(--sage);}
+  .gf-body{flex:1;overflow-y:auto;padding:8px 22px 16px;}
+  .gf-body::-webkit-scrollbar{width:0;}
+  .gf-foot{flex:none;padding:14px 22px 30px;border-top:1px solid var(--line-soft);}
+  .gift-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px;}
+  .gift-cat{aspect-ratio:1.3;border-radius:16px;display:flex;flex-direction:column;justify-content:flex-end;padding:14px;cursor:pointer;color:#fff;box-shadow:var(--shadow-sm);transition:.14s;}
+  .gift-cat:active{transform:scale(.97);}
+  .gift-cat .gc-emoji{font-size:30px;}
+  .gift-cat .gc-label{font-weight:700;font-size:14px;margin-top:6px;text-shadow:0 1px 4px rgba(0,0,0,.2);}
+  .gift-card{display:flex;align-items:center;gap:13px;background:var(--card);border:1px solid var(--line);border-radius:15px;padding:11px;margin-bottom:11px;cursor:pointer;box-shadow:var(--shadow-sm);transition:.14s;}
+  .gift-card:active{transform:scale(.99);}
+  .gift-card .gp-thumb{width:54px;height:54px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:26px;flex:none;color:#fff;}
+  .gift-card .gp-info{flex:1;}
+  .gift-card .gp-name{font-weight:600;font-size:14.5px;color:var(--navy);}
+  .gift-card .gp-via{font-size:12px;color:var(--ink-faint);margin-top:2px;}
+  .gift-card .gp-price{font-family:var(--serif);font-size:16px;color:var(--navy);font-weight:600;}
+  .gift-summary{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;box-shadow:var(--shadow-sm);margin-bottom:16px;}
+  .gift-summary .gs-thumb{width:64px;height:64px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:30px;flex:none;color:#fff;}
+  .gift-summary .gs-name{font-family:var(--serif);font-size:18px;color:var(--navy);}
+  .gift-summary .gs-meta{font-size:12.5px;color:var(--ink-soft);margin-top:3px;}
+  .gift-recipients{display:flex;flex-wrap:wrap;gap:9px;}
+
+  /* ===== Memories ===== */
+  .mem-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px;}
+  .mem-tile{position:relative;aspect-ratio:1.1;border-radius:15px;overflow:hidden;cursor:pointer;display:flex;flex-direction:column;justify-content:flex-end;padding:12px;box-shadow:var(--shadow-sm);transition:.14s;}
+  .mem-tile:active{transform:scale(.98);}
+  .mem-tile .mem-emoji{position:absolute;top:11px;left:13px;font-size:26px;filter:drop-shadow(0 2px 4px rgba(0,0,0,.25));z-index:2;}
+  .mem-tile .mem-cap{position:relative;z-index:2;color:#fff;font-size:12.5px;font-weight:600;line-height:1.3;text-shadow:0 1px 5px rgba(0,0,0,.4);}
+  .mem-tile .mem-cap span{display:block;font-size:10.5px;font-weight:500;opacity:.9;margin-top:2px;}
+  .mem-tile::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 38%,rgba(0,0,0,.4));z-index:1;}
+  .mem-tile.mem-add{background:var(--sage-wash);border:1.5px dashed #CFE2D8;align-items:center;justify-content:center;color:var(--sage-deep);}
+  .mem-tile.mem-add::after{display:none;}
+  .mem-tile.mem-add .mem-emoji{position:static;font-size:24px;color:var(--sage-deep);filter:none;}
+  .mem-tile.mem-add .mem-cap{color:var(--sage-deep);text-shadow:none;text-align:center;font-size:12px;margin-top:6px;}
+  #lightbox{position:absolute;inset:0;z-index:100;background:rgba(10,18,32,.93);display:none;align-items:center;justify-content:center;border-radius:42px;}
+  #lightbox.show{display:flex;animation:fade .25s ease both;}
+  .lb-pane{width:74%;aspect-ratio:.82;border-radius:22px;display:flex;flex-direction:column;justify-content:flex-end;padding:22px;box-shadow:0 30px 60px rgba(0,0,0,.5);}
+  .lb-pane .lb-emoji{font-size:62px;margin-bottom:auto;}
+  .lb-pane .lb-cap{color:#fff;font-family:var(--serif);font-size:21px;text-shadow:0 2px 8px rgba(0,0,0,.45);}
+  .lb-pane .lb-date{color:rgba(255,255,255,.82);font-size:13px;margin-top:5px;}
+  .lb-x{position:absolute;top:54px;right:22px;width:40px;height:40px;border-radius:50%;border:none;background:rgba(255,255,255,.16);color:#fff;font-size:18px;cursor:pointer;}
+  .lb-nav{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border-radius:50%;border:none;background:rgba(255,255,255,.16);color:#fff;font-size:24px;cursor:pointer;display:flex;align-items:center;justify-content:center;}
+  .lb-prev{left:14px;} .lb-next{right:14px;}
+
+  /* ===== Tier view ===== */
+  .tier-hero{display:flex;align-items:center;gap:14px;padding:16px;border-radius:var(--radius);margin:4px 0 14px;color:#fff;box-shadow:var(--shadow-md);}
+  .tier-hero .th-emoji{font-size:34px;}
+  .tier-hero .th-name{font-family:var(--serif);font-size:21px;}
+  .tier-hero .th-sub{font-size:12.5px;opacity:.88;margin-top:3px;line-height:1.4;}
+  .tier-hero.t1{background:linear-gradient(150deg,#C99B2E,#A6791B);}
+  .tier-hero.t2{background:linear-gradient(150deg,#6FA98E,#5E957F);}
+  .tier-hero.t3{background:linear-gradient(150deg,#3E6D8E,#2C4F6B);}
+
+  /* ===== Education module ===== */
+  .edu-hero{padding:6px 0 2px;}
+  .edu-eyebrow{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:var(--sage-deep);font-weight:700;}
+  .edu-h{font-family:var(--serif);font-size:27px;color:var(--navy);margin:8px 0 8px;font-weight:500;}
+  .edu-p{font-size:14.5px;color:var(--ink-soft);line-height:1.6;margin:0;}
+  .research-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:18px;margin-bottom:12px;box-shadow:var(--shadow-sm);}
+  .research-card .rc-stat{font-family:var(--serif);font-size:34px;color:var(--sage-deep);font-weight:600;line-height:1;}
+  .research-card .rc-kicker{font-size:10.5px;letter-spacing:1.5px;text-transform:uppercase;color:var(--ink-faint);font-weight:700;margin:10px 0 3px;}
+  .research-card .rc-title{font-size:16px;font-weight:700;color:var(--navy);}
+  .research-card .rc-body{font-size:13.5px;color:var(--ink-soft);line-height:1.55;margin-top:6px;}
+  .edu-tier{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:13px 14px;margin-bottom:11px;box-shadow:var(--shadow-sm);}
+  .edu-tier .et-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:10px;}
+  .edu-tier .et-head b{font-family:var(--serif);font-size:16px;color:var(--navy);font-weight:600;}
+  .edu-tier .et-head span{font-size:12px;color:var(--ink-faint);font-weight:600;}
+  .edu-tier .et-avs{display:flex;flex-wrap:wrap;gap:7px;}
+  .edu-tier .et-avs .avatar{width:38px;height:38px;font-size:13px;}
+
+  /* tier sort (onboarding) */
+  .tier-sort-row{display:flex;align-items:center;gap:11px;padding:9px 2px;border-bottom:1px solid var(--line-soft);}
+  .tier-sort-row .tsr-name{flex:1;font-size:14px;font-weight:600;color:var(--navy);min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .tier-seg{display:flex;background:#F1EFE9;border-radius:10px;padding:3px;gap:2px;flex:none;}
+  .tier-seg button{border:none;background:none;padding:6px 8px;border-radius:8px;font-size:10.5px;font-weight:700;color:var(--ink-faint);cursor:pointer;font-family:var(--sans);transition:.12s;}
+  .tier-seg button.on.t1{background:#A6791B;color:#fff;}
+  .tier-seg button.on.t2{background:#5E957F;color:#fff;}
+  .tier-seg button.on.t3{background:#3E6D8E;color:#fff;}
+  .tier-counts{display:flex;gap:8px;margin-bottom:14px;position:sticky;top:0;}
+  .tier-counts .tc{flex:1;text-align:center;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:9px 4px;font-size:10.5px;color:var(--ink-soft);font-weight:600;}
+  .tier-counts .tc b{display:block;font-family:var(--serif);font-size:18px;font-weight:600;color:var(--navy);margin-bottom:1px;}
+  .tier-counts .tc.full b{color:var(--sage-deep);}
+
   @media (max-width:880px){
     .stage-aside{display:none;}
     body{padding:24px 12px;}
@@ -543,15 +715,16 @@
   <p class="aside-sub">A Relationship OS — a private, intentional tool that sits on top of the apps you already use. Not a social network. No feed, no likes, no follower counts.</p>
 
   <ul class="aside-list">
-    <li><span class="tick">✓</span><span>Your inner circle of up to 30 people, sorted by relationship health</span></li>
-    <li><span class="tick">✓</span><span>Green / Yellow / Red status, auto-suggested from your touch goals</span></li>
-    <li><span class="tick">✓</span><span>Rituals & gentle nudges — never streaks or red badge counts</span></li>
-    <li><span class="tick">✓</span><span>Real-world actions: send flowers, a handwritten card, a gift</span></li>
+    <li><span class="tick">✓</span><span>Your 30, held in three rings — Inner 5 · Middle 10 · Outer 15</span></li>
+    <li><span class="tick">✓</span><span>"You Are My Chosen" — a private chat to message one, a group, or all</span></li>
+    <li><span class="tick">✓</span><span>Send flowers or a curated gift without leaving a conversation</span></li>
+    <li><span class="tick">✓</span><span>A memory archive for every person & group</span></li>
+    <li><span class="tick">✓</span><span>"Dare to Choose · Våga välja" — the research behind picking your 30</span></li>
   </ul>
 
   <div class="aside-foot">
-    <b>This is a clickable demo.</b> All screens, data and styles are self-contained in one file — explore onboarding, the home loop, a relationship profile, the ritual builder, nudges and settings.
-    <div class="aside-hint">Tip: tap the channel icons, status pills and the <kbd>+</kbd> button.</div>
+    <b>This is a clickable demo.</b> All screens, data and styles are self-contained in one file — explore the circle rings, chat, the gift flow, memories, and the education module.
+    <div class="aside-hint">Tip: tap a ring, open a chat, or replay onboarding in Settings.</div>
   </div>
 </aside>
 
@@ -580,12 +753,15 @@
             <div class="top-eyebrow">Sunday · 7 June</div>
             <div class="top-title">Good morning, Viktor</div>
           </div>
-          <div class="iconbtn" onclick="go('nudges')" title="Nudges">
+          <div class="iconbtn" onclick="switchTab('nudges')" title="Nudges">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
           </div>
         </div>
 
         <div class="body" id="home-body">
+          <!-- circle rings (the centrepiece) -->
+          <div id="home-rings"></div>
+
           <!-- status summary -->
           <div class="summary">
             <div class="pill g" onclick="filterCircle('green')"><div class="num" id="sum-g">5</div><div class="lbl">🟢 Green</div></div>
@@ -594,7 +770,7 @@
           </div>
 
           <!-- nudges -->
-          <div class="section-label">Today's nudges <span class="more" onclick="go('nudges')">See all</span></div>
+          <div class="section-label">Today's nudges <span class="more" onclick="switchTab('nudges')">See all</span></div>
           <div id="home-nudges"></div>
 
           <!-- rituals -->
@@ -689,7 +865,7 @@
             <div class="set-row" onclick="switchTab('circle')">
               <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19a5.5 5.5 0 0 1 11 0"/><circle cx="17" cy="9" r="2.6"/><path d="M16 14.5a4.6 4.6 0 0 1 4.5 4"/></svg></div>
               <div class="t">Manage circle</div>
-              <div class="v">10 / 30</div>
+              <div class="v">30 / 30</div>
               <span class="chev">›</span>
             </div>
             <div class="set-row" onclick="openSheet('sheet-add')">
@@ -733,12 +909,21 @@
             </div>
           </div>
 
+          <div class="group-head">Learn</div>
           <div class="set-group">
+            <div class="set-row" onclick="openEdu()">
+              <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-9.5-9C1 8.5 3 5 6.5 5 9 5 11 7 12 8.5 13 7 15 5 17.5 5 21 5 23 8.5 21.5 12 19 16.5 12 21 12 21z"/></svg></div>
+              <div class="t">Dare to Choose · Våga välja</div>
+              <span class="chev">›</span>
+            </div>
             <div class="set-row" onclick="restartOnboarding()">
               <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 4v4h4"/></svg></div>
               <div class="t">Replay onboarding</div>
               <span class="chev">›</span>
             </div>
+          </div>
+
+          <div class="set-group">
             <div class="set-row" onclick="toast('Signed out (demo)')">
               <div class="ic" style="background:var(--red-bg);color:var(--red)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="m16 17 5-5-5-5M21 12H9"/></svg></div>
               <div class="t" style="color:var(--red)">Sign out</div>
@@ -754,13 +939,85 @@
         <div class="topbar bordered" style="justify-content:space-between">
           <button class="backbtn" onclick="goBack()">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
-            Circle
+            <span id="detail-back">Circle</span>
           </button>
           <div class="iconbtn" onclick="openSheet('sheet-add', currentConn)" title="Edit">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
           </div>
         </div>
         <div class="body" id="detail-body"></div>
+      </div>
+
+      <!-- ===== CHAT (thread list) ===== -->
+      <div class="view" id="view-chat">
+        <div class="topbar">
+          <div>
+            <div class="top-eyebrow">Private channel</div>
+            <div class="top-title">Chat</div>
+          </div>
+          <div class="iconbtn" onclick="openSheet('sheet-newgroup')" title="New group">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>
+          </div>
+        </div>
+        <div class="body" id="chat-body"></div>
+      </div>
+
+      <!-- ===== THREAD (conversation) ===== -->
+      <div class="view" id="view-thread">
+        <div class="topbar bordered" style="gap:6px">
+          <button class="backbtn" onclick="goBack()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+            <span id="thread-back">Chat</span>
+          </button>
+          <div class="thread-title" id="thread-title" onclick="threadTitleTap()">Thread</div>
+          <div style="width:42px;flex:none"></div>
+        </div>
+        <div class="chat-log" id="thread-log"></div>
+        <div class="composer">
+          <button class="composer-add" onclick="openSheet('sheet-attach')" title="Add">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <input id="composer-input" class="composer-input" placeholder="Message…" onkeydown="if(event.key==='Enter')sendMessage()">
+          <button class="composer-send" onclick="sendMessage()" title="Send">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 9.5 21 3M21 3l-6.5 18-4-9-9-4L21 3Z"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- ===== GROUP PROFILE ===== -->
+      <div class="view" id="view-group">
+        <div class="topbar bordered" style="justify-content:space-between">
+          <button class="backbtn" onclick="goBack()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+            <span id="group-back">Chat</span>
+          </button>
+          <div style="width:42px;flex:none"></div>
+        </div>
+        <div class="body" id="group-body"></div>
+      </div>
+
+      <!-- ===== TIER (a ring) ===== -->
+      <div class="view" id="view-tier">
+        <div class="topbar bordered" style="justify-content:space-between">
+          <button class="backbtn" onclick="goBack()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+            <span id="tier-back">Home</span>
+          </button>
+          <div style="width:42px;flex:none"></div>
+        </div>
+        <div class="body" id="tier-body"></div>
+      </div>
+
+      <!-- ===== EDUCATION (Dare to Choose) ===== -->
+      <div class="view" id="view-edu">
+        <div class="topbar bordered" style="justify-content:space-between">
+          <button class="backbtn" onclick="goBack()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+            <span id="edu-back">Settings</span>
+          </button>
+          <div style="width:42px;flex:none"></div>
+        </div>
+        <div class="body" id="edu-body"></div>
       </div>
 
       <!-- FAB -->
@@ -777,6 +1034,10 @@
         <button class="tab" data-tab="circle" onclick="switchTab('circle')">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19.5a5.5 5.5 0 0 1 11 0"/><circle cx="17" cy="9" r="2.6"/><path d="M16.2 14.8a4.6 4.6 0 0 1 4.3 4.2"/></svg>
           <span>Circle</span><span class="tabdot"></span>
+        </button>
+        <button class="tab" data-tab="chat" onclick="switchTab('chat')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.4L4 21l1.1-3.9A8.4 8.4 0 1 1 21 11.5Z"/></svg>
+          <span>Chat</span><span class="tabdot"></span>
         </button>
         <button class="tab" data-tab="rituals" onclick="switchTab('rituals')">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="16" rx="3"/><path d="M3.5 9h17M8 2.5v4M16 2.5v4"/><circle cx="12" cy="14.5" r="1.6" fill="currentColor" stroke="none"/></svg>
@@ -930,7 +1191,7 @@
             <div class="info"><div class="nm">Handwritten card</div><div class="last">Posted for you · via Postsnap</div></div>
             <span class="chev" style="color:var(--ink-faint)">›</span>
           </div>
-          <div class="conn" onclick="sendThing('A gift')" style="margin-bottom:4px">
+          <div class="conn" onclick="openGiftFlow()" style="margin-bottom:4px">
             <div class="avatar" style="background:#EDEAF8;color:#6B53A8;border-radius:13px">🎁</div>
             <div class="info"><div class="nm">A gift</div><div class="last">Browse curated gifts</div></div>
             <span class="chev" style="color:var(--ink-faint)">›</span>
@@ -938,13 +1199,102 @@
         </div>
       </div>
 
+      <!-- Attach menu (chat composer +) -->
+      <div class="sheet" id="sheet-attach">
+        <div class="grab"></div>
+        <div class="sh-head"><h3>Add to the conversation</h3><button class="x" onclick="closeSheet()">✕</button></div>
+        <div class="sh-body">
+          <p class="helper" style="margin:0 0 14px">Act without leaving the chat.</p>
+          <div class="conn" onclick="attachAction('flowers')" style="margin-bottom:11px">
+            <div class="avatar" style="background:#F4D9DE;color:#B0566B;border-radius:13px">💐</div>
+            <div class="info"><div class="nm">Send flowers</div><div class="last">Delivered next day · via Interflora</div></div>
+            <span class="chev" style="color:var(--ink-faint)">›</span>
+          </div>
+          <div class="conn" onclick="attachAction('gift')" style="margin-bottom:11px">
+            <div class="avatar" style="background:#EDEAF8;color:#6B53A8;border-radius:13px">🎁</div>
+            <div class="info"><div class="nm">Send a gift</div><div class="last">Browse curated categories</div></div>
+            <span class="chev" style="color:var(--ink-faint)">›</span>
+          </div>
+          <div class="conn" onclick="attachAction('photo')" style="margin-bottom:11px">
+            <div class="avatar" style="background:#E7EEF8;color:#436BA0;border-radius:13px">🖼️</div>
+            <div class="info"><div class="nm">Share a memory</div><div class="last">Add a photo to this chat</div></div>
+            <span class="chev" style="color:var(--ink-faint)">›</span>
+          </div>
+          <div class="conn" onclick="attachAction('ritual')" style="margin-bottom:4px">
+            <div class="avatar" style="background:var(--sage-wash);color:var(--sage-deep);border-radius:13px">📅</div>
+            <div class="info"><div class="nm">Propose a ritual</div><div class="last">Suggest a recurring beat together</div></div>
+            <span class="chev" style="color:var(--ink-faint)">›</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add a memory -->
+      <div class="sheet" id="sheet-addmemory">
+        <div class="grab"></div>
+        <div class="sh-head"><h3 id="mem-title">Add a memory</h3><button class="x" onclick="closeSheet()">✕</button></div>
+        <div class="sh-body">
+          <div class="field">
+            <label>A moment</label>
+            <div class="chips" id="mem-emoji"></div>
+          </div>
+          <div class="field">
+            <label>Caption</label>
+            <input class="input" id="mem-cap" placeholder="e.g. Hiking trip in the Alps">
+          </div>
+          <div class="field">
+            <label>Colour</label>
+            <div class="chips" id="mem-grad"></div>
+          </div>
+          <div class="helper">Photos are placeholders in this prototype — pick a mood & colour.</div>
+        </div>
+        <div class="sh-foot"><button class="btn btn-sage btn-block" onclick="saveMemory()">Save memory</button></div>
+      </div>
+
+      <!-- New group (stub) -->
+      <div class="sheet" id="sheet-newgroup">
+        <div class="grab"></div>
+        <div class="sh-head"><h3>New group</h3><button class="x" onclick="closeSheet()">✕</button></div>
+        <div class="sh-body">
+          <div class="field">
+            <label>Group name</label>
+            <input class="input" placeholder="e.g. College crew">
+          </div>
+          <div class="field">
+            <label>Add from your circle</label>
+            <div class="chips" id="ng-who"></div>
+          </div>
+          <div class="helper">Subgroups let you message a few of your Chosen at once — never the whole world.</div>
+        </div>
+        <div class="sh-foot"><button class="btn btn-sage btn-block" onclick="closeSheet();toast('✓ Group created (demo)')">Create group</button></div>
+      </div>
+
+      <!-- ===== GIFT FLOW OVERLAY ===== -->
+      <div id="giftflow">
+        <div class="gf-head">
+          <button class="gf-back" onclick="giftBack()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg></button>
+          <div class="gf-title" id="gf-title">Send a gift</div>
+          <button class="gf-x" onclick="closeGift()">✕</button>
+        </div>
+        <div class="gf-steps" id="gf-steps"></div>
+        <div class="gf-body" id="gf-body"></div>
+        <div class="gf-foot" id="gf-foot"></div>
+      </div>
+
+      <!-- ===== LIGHTBOX OVERLAY ===== -->
+      <div id="lightbox" onclick="closeLightbox()">
+        <button class="lb-x" onclick="event.stopPropagation();closeLightbox()">✕</button>
+        <button class="lb-nav lb-prev" onclick="event.stopPropagation();lbStep(-1)">‹</button>
+        <div class="lb-pane" id="lb-pane" onclick="event.stopPropagation()"></div>
+        <button class="lb-nav lb-next" onclick="event.stopPropagation();lbStep(1)">›</button>
+      </div>
+
     </div><!-- /app -->
 
-    <!-- ============ ONBOARDING OVERLAY ============ -->
+    <!-- ============ ONBOARDING / EDUCATION OVERLAY ============ -->
     <div id="onboard">
       <button class="skip" onclick="finishOnboarding()">Skip</button>
 
-      <!-- 1 splash -->
+      <!-- 0 splash -->
       <div class="ob-screen ob-splash active" data-ob="0">
         <div class="hero">
           <div class="glyph"><svg viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-4.5-9.5-9C1 8.5 3 5 6.5 5 9 5 11 7 12 8.5 13 7 15 5 17.5 5 21 5 23 8.5 21.5 12 19 16.5 12 21 12 21z" fill="#0D1F3C"/></svg></div>
@@ -952,17 +1302,17 @@
           <p>Your 30 most important relationships, gently kept. No feed. No likes. Just the people you've chosen.</p>
         </div>
         <div class="foot">
-          <div class="ob-dots"><i class="on"></i><i></i><i></i><i></i></div>
+          <div class="ob-dots" data-dots="0"></div>
           <button class="btn btn-sage btn-block" onclick="obNext(1)">Get started</button>
           <button class="btn btn-block" style="background:none;color:#AEBBCF;margin-top:4px" onclick="obNext(1)">I already have an account</button>
         </div>
       </div>
 
-      <!-- 2 sign up -->
+      <!-- 1 sign up -->
       <div class="ob-screen" data-ob="1">
         <div class="ob-body">
           <div class="top" style="padding-top:64px">
-            <div class="top-eyebrow" style="color:var(--sage-deep)">Step 1 of 3</div>
+            <div class="top-eyebrow" style="color:var(--sage-deep)">Step 1 of 5</div>
             <h2>Create your account</h2>
             <p class="lead">Private by design. Your circle is yours alone.</p>
           </div>
@@ -976,36 +1326,74 @@
             <div class="field"><label>Password</label><input class="input" type="password" value="········"></div>
           </div>
           <div class="ob-foot">
-            <div class="ob-dots"><i></i><i class="on"></i><i></i><i></i></div>
+            <div class="ob-dots" data-dots="1"></div>
             <button class="btn btn-sage btn-block" onclick="obNext(2)">Continue</button>
           </div>
         </div>
       </div>
 
-      <!-- 3 add inner circle -->
+      <!-- 2 why ~30 -->
       <div class="ob-screen" data-ob="2">
         <div class="ob-body">
           <div class="top" style="padding-top:64px">
-            <div class="top-eyebrow" style="color:var(--sage-deep)">Step 2 of 3</div>
-            <h2>Add your inner circle</h2>
-            <p class="lead">From your contacts. Pick the people you never want to drift from.</p>
+            <div class="top-eyebrow" style="color:var(--sage-deep)">Dare to Choose · Våga välja</div>
+            <h2>Why only thirty?</h2>
+            <p class="lead">Step 2 of 5</p>
           </div>
           <div class="ob-scroll">
-            <div class="countbar"><span>Suggested from contacts</span><span><b id="ob-count">0</b> selected</span></div>
-            <div id="ob-picks"></div>
+            <p style="font-size:15px;line-height:1.65;color:var(--ink-soft);margin:0 0 16px">You can <i>know</i> hundreds of people. But you can only truly <b style="color:var(--navy)">keep close</b> a handful. Chosen asks you to do the brave, freeing thing — decide who your people are, and give them your attention on purpose.</p>
+            <div class="note-box">
+              <div class="nh">The hard part is the choosing</div>
+              Naming your thirty means admitting who they are <i>not</i>. That discomfort is the point — it's what turns a vague intention into a real commitment.
+            </div>
           </div>
           <div class="ob-foot">
-            <div class="ob-dots"><i></i><i></i><i class="on"></i><i></i></div>
-            <button class="btn btn-sage btn-block" onclick="obNext(3)" id="ob-cta">Add <span id="ob-cta-n">0</span> people</button>
+            <div class="ob-dots" data-dots="2"></div>
+            <button class="btn btn-sage btn-block" onclick="obNext(3)">Show me the research</button>
           </div>
         </div>
       </div>
 
-      <!-- 4 first ritual -->
+      <!-- 3 research -->
       <div class="ob-screen" data-ob="3">
         <div class="ob-body">
           <div class="top" style="padding-top:64px">
-            <div class="top-eyebrow" style="color:var(--sage-deep)">Step 3 of 3 · Optional</div>
+            <div class="top-eyebrow" style="color:var(--sage-deep)">The evidence</div>
+            <h2>What the science says</h2>
+            <p class="lead">Step 3 of 5</p>
+          </div>
+          <div class="ob-scroll" id="ob-research"></div>
+          <div class="ob-foot">
+            <div class="ob-dots" data-dots="3"></div>
+            <button class="btn btn-sage btn-block" onclick="obNext(4)">Choose my thirty</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 4 guided tier sort -->
+      <div class="ob-screen" data-ob="4">
+        <div class="ob-body">
+          <div class="top" style="padding-top:64px">
+            <div class="top-eyebrow" style="color:var(--sage-deep)">The choosing</div>
+            <h2>Place your people</h2>
+            <p class="lead">Inner 5 · Middle 10 · Outer 15. Move anyone, anytime.</p>
+          </div>
+          <div class="ob-scroll">
+            <div class="tier-counts" id="ob-tier-counts"></div>
+            <div id="ob-sort"></div>
+          </div>
+          <div class="ob-foot">
+            <div class="ob-dots" data-dots="4"></div>
+            <button class="btn btn-sage btn-block" onclick="obNext(5)">Looks right</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5 first ritual -->
+      <div class="ob-screen" data-ob="5">
+        <div class="ob-body">
+          <div class="top" style="padding-top:64px">
+            <div class="top-eyebrow" style="color:var(--sage-deep)">Step 5 of 5 · Optional</div>
             <h2>Set your first ritual</h2>
             <p class="lead">A recurring commitment. Chosen will gently remind you — once.</p>
           </div>
@@ -1030,7 +1418,7 @@
             </div>
           </div>
           <div class="ob-foot">
-            <div class="ob-dots"><i></i><i></i><i></i><i class="on"></i></div>
+            <div class="ob-dots" data-dots="5"></div>
             <button class="btn btn-sage btn-block" onclick="finishOnboarding()">Enter Chosen</button>
             <button class="btn btn-block" style="background:none;color:var(--ink-faint);margin-top:2px" onclick="finishOnboarding()">Skip for now</button>
           </div>
@@ -1056,18 +1444,66 @@ const CHAN = {
   phone:{label:'Phone call', emoji:'📞', deeplink:'tel:'}
 };
 
-// last contacted expressed in days ago; status derived for realism
+// gradient palette for offline "photos" (gift thumbs, memory tiles)
+const GRADS = {
+  rose:'linear-gradient(150deg,#F4D9DE,#C77E91)',
+  sage:'linear-gradient(150deg,#9FCBB9,#5E957F)',
+  sand:'linear-gradient(150deg,#EFE3CF,#CBA66B)',
+  cocoa:'linear-gradient(150deg,#E7D3C5,#9C6B4F)',
+  sky:'linear-gradient(150deg,#D7E6F4,#6E9BC4)',
+  sunset:'linear-gradient(150deg,#F6D8C0,#D98A6A)',
+  lilac:'linear-gradient(150deg,#E5DEF5,#9683C4)',
+  mint:'linear-gradient(150deg,#D7EFE4,#74B79A)'
+};
+function grad(k){return GRADS[k]||GRADS.sage;}
+
+// tier metadata (5 / 10 / 15)
+const TIER_NAME={1:'Inner 5',2:'Middle 10',3:'Outer 15'};
+const TIER_EMOJI={1:'💛',2:'🤍',3:'🫂'};
+const TIER_DESC={1:'The five who’d drop everything.',2:'The ten you lean on.',3:'The fifteen you’d hate to lose.'};
+
+// last contacted expressed in days ago; status set for realism; tier = ring
 let CONNECTIONS = [
-  {id:1, name:'Mom', rel:'Family', chan:'phone', freq:7, days:23, bday:'14 Mar', notes:'Loves our Sunday calls. Ask about the garden and her book club.', status:'red'},
-  {id:2, name:'Daniel Reyes', rel:'Friend', chan:'whatsapp', freq:14, days:31, bday:'2 Aug', notes:'Best friend since uni. Just started a new job at a fintech — check in on how it’s going.', status:'red'},
-  {id:3, name:'Sara Lindqvist', rel:'Friend', chan:'instagram', freq:14, days:21, bday:'30 Nov', notes:'Training for the Stockholm marathon. Loves oat-milk flat whites ☕', status:'yellow'},
-  {id:4, name:'Johan Berg', rel:'Friend', chan:'whatsapp', freq:21, days:24, bday:'9 Jan', notes:'Monthly dinner crew with Emma. Big into vinyl records.', status:'yellow'},
-  {id:5, name:'Emma Karlsson', rel:'Friend', chan:'imessage', freq:30, days:33, bday:'18 Jun', notes:'Just had a baby — Liv, born April. Send congratulations 🌷', status:'yellow'},
-  {id:6, name:'Lena (Partner)', rel:'Partner', chan:'imessage', freq:1, days:0, bday:'5 Feb', notes:'Anniversary 12 Sept. Loves peonies and handwritten notes.', status:'green'},
-  {id:7, name:'Pieter Hoekstra', rel:'Mentor', chan:'phone', freq:30, days:12, bday:'21 Oct', notes:'Former manager, now mentor. Quarterly coffee. Ask about his sailing.', status:'green'},
-  {id:8, name:'Aisha Okafor', rel:'Friend', chan:'whatsapp', freq:21, days:9, bday:'3 May', notes:'Moved to Lisbon last year. Plan a visit.', status:'green'},
-  {id:9, name:'Marcus Vinter', rel:'Colleague', chan:'imessage', freq:30, days:14, bday:'27 Sep', notes:'Co-founded the side project. Keep it warm beyond work.', status:'green'},
-  {id:10, name:'Grandpa Olof', rel:'Family', chan:'phone', freq:14, days:11, bday:'1 Dec', notes:'90 this year. Tells the best stories. Call on Sundays.', status:'green'},
+  // ---- Inner 5 ----
+  {id:6, name:'Lena (Partner)', rel:'Partner', chan:'imessage', freq:1, days:0, bday:'5 Feb', tier:1, status:'green', notes:'Anniversary 12 Sept. Loves peonies and handwritten notes.',
+    memories:[{emoji:'🌅',grad:'sunset',cap:'Sunrise in Lofoten',date:'Jun 2025'},{emoji:'🍷',grad:'rose',cap:'Our anniversary dinner',date:'Sep 2025'},{emoji:'🏡',grad:'sage',cap:'First weekend in the new flat',date:'Mar 2026'}]},
+  {id:1, name:'Mom', rel:'Family', chan:'phone', freq:7, days:23, bday:'14 Mar', tier:1, status:'red', notes:'Loves our Sunday calls. Ask about the garden and her book club.',
+    memories:[{emoji:'🌷',grad:'rose',cap:'Sunday lunch in the garden',date:'May 2025'},{emoji:'🎂',grad:'sand',cap:'Her 60th',date:'Mar 2025'}]},
+  {id:2, name:'Daniel Reyes', rel:'Friend', chan:'whatsapp', freq:14, days:31, bday:'2 Aug', tier:1, status:'red', notes:'Best friend since uni. Just started a new job at a fintech — check in on how it’s going.',
+    memories:[{emoji:'🎸',grad:'cocoa',cap:'That festival, 2019',date:'Aug 2024'},{emoji:'🍺',grad:'sand',cap:'Friday pub quiz',date:'Feb 2026'}]},
+  {id:10, name:'Grandpa Olof', rel:'Family', chan:'phone', freq:14, days:11, bday:'1 Dec', tier:1, status:'green', notes:'90 this year. Tells the best stories. Call on Sundays.',
+    memories:[{emoji:'⛵',grad:'sky',cap:'Sailing on the archipelago',date:'Jul 2024'}]},
+  {id:3, name:'Sara Lindqvist', rel:'Friend', chan:'instagram', freq:14, days:21, bday:'30 Nov', tier:1, status:'yellow', notes:'Training for the Stockholm marathon. Loves oat-milk flat whites ☕',
+    memories:[{emoji:'🏃‍♀️',grad:'mint',cap:'Half-marathon PB',date:'Oct 2025'}]},
+
+  // ---- Middle 10 ----
+  {id:4, name:'Johan Berg', rel:'Friend', chan:'whatsapp', freq:21, days:24, bday:'9 Jan', tier:2, status:'yellow', notes:'Monthly dinner crew with Emma. Big into vinyl records.', memories:[]},
+  {id:5, name:'Emma Karlsson', rel:'Friend', chan:'imessage', freq:30, days:33, bday:'18 Jun', tier:2, status:'yellow', notes:'Just had a baby — Liv, born April. Send congratulations 🌷', memories:[{emoji:'👶',grad:'rose',cap:'Meeting baby Liv',date:'Apr 2026'}]},
+  {id:7, name:'Pieter Hoekstra', rel:'Mentor', chan:'phone', freq:30, days:12, bday:'21 Oct', tier:2, status:'green', notes:'Former manager, now mentor. Quarterly coffee. Ask about his sailing.', memories:[]},
+  {id:8, name:'Aisha Okafor', rel:'Friend', chan:'whatsapp', freq:21, days:9, bday:'3 May', tier:2, status:'green', notes:'Moved to Lisbon last year. Plan a visit.', memories:[{emoji:'🇵🇹',grad:'sky',cap:'Visiting her in Lisbon',date:'Sep 2025'}]},
+  {id:9, name:'Marcus Vinter', rel:'Colleague', chan:'imessage', freq:30, days:14, bday:'27 Sep', tier:2, status:'green', notes:'Co-founded the side project. Keep it warm beyond work.', memories:[]},
+  {id:11, name:'Noah Lind', rel:'Friend', chan:'whatsapp', freq:30, days:18, bday:'7 Jul', tier:2, status:'yellow', notes:'Climbing partner. Planning a trip to the Alps.', memories:[]},
+  {id:12, name:'Klara Mörk', rel:'Friend', chan:'instagram', freq:30, days:20, bday:'12 Apr', tier:2, status:'yellow', notes:'Art-school friend. Always knows the best exhibitions.', memories:[]},
+  {id:13, name:'David Okonkwo', rel:'Colleague', chan:'imessage', freq:45, days:16, bday:'2 Feb', tier:2, status:'green', notes:'Worked together in Berlin. Sharp, generous, funny.', memories:[]},
+  {id:14, name:'Sofia Reuter', rel:'Family', chan:'imessage', freq:14, days:8, bday:'19 Sep', tier:2, status:'green', notes:'My sister. Two kids. Sends the best memes.', memories:[{emoji:'🎄',grad:'rose',cap:'Christmas at hers',date:'Dec 2025'}]},
+  {id:15, name:'Yusuf Demir', rel:'Friend', chan:'whatsapp', freq:30, days:41, bday:'25 Mar', tier:2, status:'red', notes:'Old flatmate. We always pick up where we left off.', memories:[]},
+
+  // ---- Outer 15 ----
+  {id:16, name:'Hannah Wallin', rel:'Friend', chan:'instagram', freq:60, days:34, bday:'8 Aug', tier:3, status:'yellow', notes:'Book club. Loves a long voice note.', memories:[]},
+  {id:17, name:'Erik Sandberg', rel:'Colleague', chan:'imessage', freq:60, days:22, bday:'16 May', tier:3, status:'green', notes:'Mentor’s mentor. Coffee twice a year.', memories:[]},
+  {id:18, name:'Priya Nair', rel:'Friend', chan:'whatsapp', freq:60, days:50, bday:'29 Oct', tier:3, status:'yellow', notes:'Met travelling in Kerala. Pen-pal energy.', memories:[]},
+  {id:19, name:'Tomás Alvarez', rel:'Friend', chan:'whatsapp', freq:60, days:70, bday:'4 Jul', tier:3, status:'red', notes:'Barcelona. Owes me a paella recipe.', memories:[]},
+  {id:20, name:'Mei Chen', rel:'Friend', chan:'instagram', freq:45, days:19, bday:'11 Nov', tier:3, status:'green', notes:'Design crit buddy. Brutally honest, in a good way.', memories:[]},
+  {id:21, name:'Oskar Holm', rel:'Friend', chan:'whatsapp', freq:60, days:31, bday:'23 Feb', tier:3, status:'yellow', notes:'Five-a-side football. Weekend warrior.', memories:[]},
+  {id:22, name:'Fatima Zahra', rel:'Friend', chan:'imessage', freq:90, days:38, bday:'1 Apr', tier:3, status:'green', notes:'Uni reunion organiser. Keeps us all together.', memories:[]},
+  {id:23, name:'Leo Andersson', rel:'Friend', chan:'whatsapp', freq:60, days:64, bday:'17 Jun', tier:3, status:'red', notes:'Childhood neighbour. Lives in Oslo now.', memories:[]},
+  {id:24, name:'Greta Lund', rel:'Family', chan:'phone', freq:60, days:28, bday:'9 Dec', tier:3, status:'green', notes:'Cousin. Hosts a legendary midsummer.', memories:[]},
+  {id:25, name:'Sam Whitfield', rel:'Mentor', chan:'imessage', freq:90, days:44, bday:'3 Mar', tier:3, status:'green', notes:'Industry mentor. Replies to thoughtful questions.', memories:[]},
+  {id:26, name:'Nora Bergström', rel:'Friend', chan:'instagram', freq:60, days:33, bday:'21 Jul', tier:3, status:'yellow', notes:'Yoga + brunch. Calm presence.', memories:[]},
+  {id:27, name:'Anton Falk', rel:'Colleague', chan:'imessage', freq:90, days:20, bday:'30 Jan', tier:3, status:'green', notes:'Former teammate. Good for a reference & a laugh.', memories:[]},
+  {id:28, name:'Ines Costa', rel:'Friend', chan:'whatsapp', freq:60, days:55, bday:'14 Sep', tier:3, status:'red', notes:'Lisbon crew with Aisha. Sea swimmer.', memories:[]},
+  {id:29, name:'Jonas Vik', rel:'Friend', chan:'whatsapp', freq:90, days:26, bday:'6 Oct', tier:3, status:'green', notes:'Ski trips. Owns a cabin in Åre.', memories:[]},
+  {id:30, name:'Amara Diallo', rel:'Friend', chan:'instagram', freq:60, days:36, bday:'28 May', tier:3, status:'yellow', notes:'Met at a conference. Future collaborator?', memories:[]},
 ];
 
 let RITUALS = [
@@ -1086,8 +1522,73 @@ let NUDGES = [
   {id:7, kind:'yellow', conn:7, title:'Quarterly coffee with Pieter', sub:'You snoozed this · remind in 3 days', status:'snoozed'},
 ];
 
-// onboarding suggested contacts
+// ---- Chat: groups + threads + messages ----
+let GROUPS = [
+  {id:'all', name:'You Are My Chosen', members:'all', emoji:'🤍', sub:'Your whole circle',
+    memories:[{emoji:'🥂',grad:'sunset',cap:'New Year, all of us',date:'Jan 2026'},{emoji:'🏖️',grad:'sky',cap:'Summer house weekend',date:'Jul 2025'}]},
+  {id:'inner5', name:'Inner 5', members:[6,1,2,3,10], emoji:'💛', sub:'Your closest five',
+    memories:[{emoji:'🍝',grad:'cocoa',cap:'Sunday supper club',date:'Apr 2026'}]},
+  {id:'family', name:'Family', members:[1,10,14,24], emoji:'👨‍👩‍👧', sub:'The whole family',
+    memories:[{emoji:'🎄',grad:'rose',cap:'Christmas at Mom’s',date:'Dec 2025'}]},
+];
+function groupMembers(g){return g.members==='all'?CONNECTIONS.map(c=>c.id):g.members;}
+
+let THREADS = [
+  {id:'t-all', kind:'group', gid:'all', last:'Lena: see you all Sunday 🤍', when:'9:12'},
+  {id:'t-inner5', kind:'group', gid:'inner5', last:'You: planning dinner', when:'Tue'},
+  {id:'t-family', kind:'group', gid:'family', last:'Grandpa Olof: 📷 old photo', when:'Mon'},
+  {id:'t-c6', kind:'dm', cid:6, last:'Lena: love you ❤️', when:'8:40'},
+  {id:'t-c1', kind:'dm', cid:1, last:'Mom: call me Sunday?', when:'Yest'},
+  {id:'t-c2', kind:'dm', cid:2, last:'Daniel: intense but good 😅', when:'Wed'},
+  {id:'t-c3', kind:'dm', cid:3, last:'You: you’ve got this 🏃‍♀️', when:'Wed'},
+  {id:'t-c8', kind:'dm', cid:8, last:'Aisha: come visit Lisbon!', when:'Mon'},
+];
+let MESSAGES = {
+  't-c6':[{from:6,t:'Morning ☀️ coffee tonight?',when:'8:38'},{from:'me',t:'Yes — 7pm, the usual ❤️',when:'8:40'},{from:6,t:'love you ❤️',when:'8:40'}],
+  't-c1':[{from:1,t:'Are we still on for Sunday?',when:'Yest'},{from:'me',t:'Always. I’ll call at 10 🌷',when:'Yest'},{from:1,t:'call me Sunday?',when:'Yest'}],
+  't-c2':[{from:'me',t:'Hey! How’s the new job treating you?',when:'Wed'},{from:2,t:'Intense but good 😅 lots to learn',when:'Wed'}],
+  't-c3':[{from:3,t:'Marathon this weekend!!',when:'Wed'},{from:'me',t:'You’ve got this 🏃‍♀️🌟',when:'Wed'}],
+  't-c8':[{from:8,t:'Lisbon is unreal — you’d love it. Come visit!',when:'Mon'}],
+  't-all':[{from:3,t:'Marathon done!! 🏃‍♀️🥇',when:'8:02'},{from:'me',t:'So proud of you 🌟',when:'8:10'},{from:6,t:'see you all Sunday 🤍',when:'9:12'}],
+  't-inner5':[{from:6,t:'Dinner Friday? My place.',when:'Tue'},{from:'me',t:'I’m in 🙌',when:'Tue'},{from:2,t:'Same. Bringing wine.',when:'Tue'}],
+  't-family':[{from:10,t:'Found an old photo of us all 📷',when:'Mon'}],
+};
+
+// ---- Gifts ----
+const GIFT_CATS = [
+  {id:'flowers', label:'Flowers', emoji:'💐', grad:'rose'},
+  {id:'books', label:'Books', emoji:'📚', grad:'sand'},
+  {id:'sweet', label:'Sweet treats', emoji:'🍫', grad:'cocoa'},
+  {id:'home', label:'Home & candle', emoji:'🕯️', grad:'sage'},
+  {id:'exp', label:'Experiences', emoji:'🎟️', grad:'sky'},
+];
+const GIFTS = [
+  {id:'g1', cat:'flowers', name:'Peony bouquet', price:'$48', emoji:'🌷', grad:'rose', via:'Interflora'},
+  {id:'g2', cat:'flowers', name:'Wild meadow bunch', price:'$36', emoji:'🌾', grad:'sand', via:'Interflora'},
+  {id:'g3', cat:'flowers', name:'Single orchid', price:'$29', emoji:'🪴', grad:'mint', via:'Interflora'},
+  {id:'g4', cat:'books', name:'A poetry anthology', price:'$22', emoji:'📖', grad:'sand', via:'Bokus'},
+  {id:'g5', cat:'books', name:'The novel everyone’s reading', price:'$18', emoji:'📕', grad:'cocoa', via:'Bokus'},
+  {id:'g6', cat:'sweet', name:'Artisan chocolate box', price:'$26', emoji:'🍫', grad:'cocoa', via:'Lakrids'},
+  {id:'g7', cat:'sweet', name:'Cinnamon-bun hamper', price:'$34', emoji:'🥐', grad:'sand', via:'Local bakery'},
+  {id:'g8', cat:'home', name:'Hand-poured candle', price:'$32', emoji:'🕯️', grad:'sage', via:'Skandinavisk'},
+  {id:'g9', cat:'home', name:'Linen tea towel set', price:'$24', emoji:'🧺', grad:'mint', via:'Designtorget'},
+  {id:'g10', cat:'exp', name:'Coffee-tasting for two', price:'$60', emoji:'☕', grad:'cocoa', via:'Tweed'},
+  {id:'g11', cat:'exp', name:'Pottery class voucher', price:'$75', emoji:'🏺', grad:'sand', via:'Studio'},
+];
+
+// ---- Education / research ----
+const RESEARCH = [
+  {kicker:'The number', stat:'~150', title:'Dunbar’s number', body:'Our brains can sustain roughly 150 stable relationships — and only a fraction of those can ever be close.'},
+  {kicker:'The inner layers', stat:'5 · 15 · 50', title:'Support, sympathy, affinity', body:'Inside that 150 sit tighter layers: about 5 closest, 15 good friends, 50 you genuinely trust.'},
+  {kicker:'The cost of drift', stat:'7 yrs', title:'Friendships fade quietly', body:'Left to chance, even close friendships weaken within a few years. Rhythm — not luck — keeps a bond alive.'},
+];
+
+// onboarding suggested contacts / sort list
 const OB_SUGGEST = ['Mom','Lena','Daniel Reyes','Sara Lindqvist','Johan Berg','Emma Karlsson','Grandpa Olof','Pieter Hoekstra'];
+const OB_SORT = ['Lena (Partner)','Mom','Daniel Reyes','Grandpa Olof','Sara Lindqvist','Johan Berg','Emma Karlsson','Aisha Okafor','Sofia Reuter','Noah Lind','Hannah Wallin','Priya Nair'];
+
+// tier-count sanity check (non-fatal)
+try{[1,2,3].forEach(t=>console.assert(CONNECTIONS.filter(c=>c.tier===t).length===({1:5,2:10,3:15})[t], 'tier '+t+' count off'));}catch(e){}
 
 /* =========================================================
    ICON helpers
@@ -1111,12 +1612,16 @@ function daysLabel(d){return d===0?'Today':d===1?'Yesterday':d+' days ago';}
 function conn(id){return CONNECTIONS.find(c=>c.id===id);}
 
 function avatarHTML(c, big){
-  const sz = big?'':'';
   return `<div class="avatar" style="background:${avColor(c.name)};${big?'width:96px;height:96px;font-size:34px;':''}">
     ${initials(c.name)}
     <span class="statusdot sd-${c.status[0]}"></span>
   </div>`;
 }
+function miniAvatar(c, size){
+  size = size || 22;
+  return `<span class="mini-av" style="width:${size}px;height:${size}px;font-size:${Math.round(size*0.42)}px;background:${avColor(c.name)}">${initials(c.name)}</span>`;
+}
+function escapeHTML(s){return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
 
 /* =========================================================
    RENDERERS
@@ -1129,6 +1634,7 @@ function counts(){
 }
 
 function renderHome(){
+  renderRings();
   const {g,y,r}=counts();
   document.getElementById('sum-g').textContent=g;
   document.getElementById('sum-y').textContent=y;
@@ -1158,6 +1664,41 @@ function renderHome(){
     .sort((a,b)=> sevRank(a.status)-sevRank(b.status) || b.days-a.days).slice(0,4);
   document.getElementById('home-circle').innerHTML = att.map(connRow).join('');
 }
+
+/* ===== Circle rings (home centrepiece) ===== */
+function renderRings(){
+  const wrap=document.getElementById('home-rings'); if(!wrap)return;
+  const tiers={1:[],2:[],3:[]};
+  CONNECTIONS.forEach(c=>{ if(tiers[c.tier]) tiers[c.tier].push(c); });
+  // ring geometry: r in svg units (box 320, centre 160); rp = radius as % of container from centre
+  const RING=[{t:1,r:52,rp:16.25,sz:34},{t:2,r:100,rp:31.25,sz:27},{t:3,r:148,rp:46.25,sz:20}];
+  let circles='', avs='';
+  RING.forEach(ring=>{
+    const op = ring.t===1?0.55:ring.t===2?0.34:0.2;
+    circles+=`<circle cx="160" cy="160" r="${ring.r}" fill="none" stroke="#7FB5A0" stroke-opacity="${op}" stroke-width="1.5"/>`;
+    circles+=`<circle cx="160" cy="160" r="${ring.r}" fill="none" stroke="transparent" stroke-width="20" style="cursor:pointer" onclick="openTier(${ring.t})"/>`;
+    const list=tiers[ring.t], n=list.length||1;
+    list.forEach((c,i)=>{
+      const ang=(-90 + i*(360/n))*Math.PI/180;
+      const left=50+ring.rp*Math.cos(ang);
+      const top=50+ring.rp*Math.sin(ang);
+      avs+=`<div class="ring-av" style="left:${left}%;top:${top}%;width:${ring.sz}px;height:${ring.sz}px;font-size:${Math.round(ring.sz*0.38)}px;background:${avColor(c.name)}" onclick="openDetail(${c.id})" title="${c.name}">${initials(c.name)}<span class="ring-sd sd-${c.status[0]}"></span></div>`;
+    });
+  });
+  wrap.innerHTML=`
+    <div class="rings-head"><div class="t">Your circle</div><div class="s">${CONNECTIONS.length} chosen</div></div>
+    <div class="rings">
+      <svg viewBox="0 0 320 320">${circles}</svg>
+      <div class="ring-you" onclick="toast('This is you — the centre of your circle')">You</div>
+      ${avs}
+    </div>
+    <div class="ring-legend">
+      <div class="rl" onclick="openTier(1)"><b>${tiers[1].length}</b>💛 Inner</div>
+      <div class="rl" onclick="openTier(2)"><b>${tiers[2].length}</b>🤍 Middle</div>
+      <div class="rl" onclick="openTier(3)"><b>${tiers[3].length}</b>🫂 Outer</div>
+    </div>`;
+}
+
 function sevRank(s){return s==='red'?0:s==='yellow'?1:2;}
 function actionVerb(ch){return ch==='phone'?'Call':'Message';}
 function emptyMini(t){return `<div style="text-align:center;color:var(--ink-faint);font-size:13.5px;padding:18px 10px;">${t}</div>`;}
@@ -1246,7 +1787,7 @@ function renderNudges(){
 
 /* ===== DETAIL VIEW ===== */
 let currentConn=null;
-function openDetail(id){
+function renderDetail(id){
   currentConn=id;
   const c=conn(id);
   const sChar=c.status[0];
@@ -1288,6 +1829,9 @@ function openDetail(id){
     <div class="section-label">Notes & context</div>
     <div class="note-box"><div class="nh">What matters to ${c.name.split(' ')[0]}</div>${c.notes}</div>
 
+    <div class="section-label">Memories <span class="more" onclick="openAddMemory('c${c.id}')">＋ Add</span></div>
+    ${renderMemGrid(c.memories||[], 'c'+c.id)}
+
     <div class="section-label">Rituals</div>
     ${ritualsForConn(c.id)}
 
@@ -1297,9 +1841,62 @@ function openDetail(id){
     <div style="height:10px"></div>
     <button class="btn btn-soft btn-block" onclick="openSheet('sheet-log',${c.id})">＋ Log an interaction</button>
   `;
-  go('detail');
+  const top=NAV[NAV.length-1];
+  document.getElementById('detail-back').textContent=(top&&top.backLabel)||'Circle';
 }
 function freqWord(d){return d<=1?'daily':d<=7?'weekly':d<=14?'every 2 weeks':d<=31?'monthly':'a few times a year';}
+
+/* ===== Memories (shared by person + group) ===== */
+function renderMemGrid(mems, ownerKey){
+  mems = mems||[];
+  let tiles = mems.map((m,i)=>`<div class="mem-tile" style="background:${grad(m.grad)}" onclick="openLightbox('${ownerKey}',${i})">
+      <div class="mem-emoji">${m.emoji}</div>
+      <div class="mem-cap">${escapeHTML(m.cap)}<span>${m.date}</span></div>
+    </div>`).join('');
+  tiles += `<div class="mem-tile mem-add" onclick="openAddMemory('${ownerKey}')"><div class="mem-emoji">＋</div><div class="mem-cap">Add a memory</div></div>`;
+  return `<div class="mem-grid">${tiles}</div>`;
+}
+function ownerMems(key){
+  if(!key) return [];
+  if(key[0]==='c'){const c=conn(+key.slice(1)); if(!c.memories)c.memories=[]; return c.memories;}
+  if(key[0]==='g'){const g=GROUPS.find(x=>x.id===key.slice(1)); if(!g.memories)g.memories=[]; return g.memories;}
+  return [];
+}
+function ownerName(key){
+  if(key[0]==='c') return conn(+key.slice(1)).name.split(' ')[0];
+  if(key[0]==='g') return GROUPS.find(x=>x.id===key.slice(1)).name;
+  return '';
+}
+let lbKey=null, lbIdx=0;
+function openLightbox(key, idx){
+  lbKey=key; lbIdx=idx; renderLightbox();
+  document.getElementById('lightbox').classList.add('show');
+}
+function renderLightbox(){
+  const mems=ownerMems(lbKey); const m=mems[lbIdx]; if(!m)return;
+  document.getElementById('lb-pane').style.background=grad(m.grad);
+  document.getElementById('lb-pane').innerHTML=`<div class="lb-emoji">${m.emoji}</div><div class="lb-cap">${escapeHTML(m.cap)}</div><div class="lb-date">${m.date} · with ${ownerName(lbKey)}</div>`;
+}
+function lbStep(d){const mems=ownerMems(lbKey); lbIdx=(lbIdx+d+mems.length)%mems.length; renderLightbox();}
+function closeLightbox(){document.getElementById('lightbox').classList.remove('show');}
+
+let memCtx=null;
+const MEM_EMOJI=['🌅','🏔️','🍝','🎂','🎸','🏖️','☕','🎄','🥂','📸','🌷','⛵'];
+const MEM_GRADS=['sunset','sky','cocoa','rose','sand','sage','mint','lilac'];
+function openAddMemory(key){
+  memCtx=key;
+  document.getElementById('mem-title').textContent='Add a memory · '+ownerName(key);
+  document.getElementById('mem-emoji').innerHTML=MEM_EMOJI.map((e,i)=>`<div class="chip ${i===0?'sel':''}" onclick="pickOne(this,'mem-emoji')" style="font-size:18px">${e}</div>`).join('');
+  document.getElementById('mem-grad').innerHTML=MEM_GRADS.map((g,i)=>`<div class="chip ${i===0?'sel':''}" onclick="pickOne(this,'mem-grad')" data-grad="${g}"><span style="width:18px;height:18px;border-radius:5px;display:inline-block;background:${grad(g)}"></span></div>`).join('');
+  document.getElementById('mem-cap').value='';
+  openSheet('sheet-addmemory');
+}
+function saveMemory(){
+  const e=document.querySelector('#mem-emoji .chip.sel'); const g=document.querySelector('#mem-grad .chip.sel');
+  const cap=document.getElementById('mem-cap').value.trim()||'A good moment';
+  ownerMems(memCtx).push({emoji:e?e.textContent.trim():'📸', grad:g?g.dataset.grad:'sage', cap, date:'Just now'});
+  closeSheet(); toast('✓ Memory saved'); paint();
+}
 
 function ritualsForConn(id){
   const rs=RITUALS.filter(r=>r.who.includes(id));
@@ -1328,49 +1925,81 @@ function timelineFor(c){
 /* =========================================================
    NAVIGATION
    ========================================================= */
-let history=['home'];
+const TAB_LABEL={home:'Home',circle:'Circle',chat:'Chat',rituals:'Rituals',nudges:'Nudges',settings:'Settings'};
+const TABS=['home','circle','chat','rituals','nudges','settings'];
+let NAV=[{view:'home',label:'Home'}];
+
 function go(view){
   document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
-  document.getElementById('view-'+view).classList.add('active');
-  // scroll bodies to top
+  const el=document.getElementById('view-'+view); if(el)el.classList.add('active');
   const b=document.querySelector('#view-'+view+' .body'); if(b)b.scrollTop=0;
-  // FAB visibility
-  const fab=document.getElementById('fab');
-  fab.style.display = (view==='home'||view==='circle'||view==='rituals')?'flex':'none';
+  document.getElementById('fab').style.display=(view==='home'||view==='circle'||view==='rituals')?'flex':'none';
+  document.querySelector('.tabbar').style.display=(view==='thread')?'none':'flex';
   window._view=view;
 }
-function switchTab(tab){
-  history=[tab];
-  go(tab);
-  document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('active', t.dataset.tab===tab));
-  if(tab==='home')renderHome();
-  if(tab==='circle'){circleFilter='all';syncSeg('circle-seg',0);renderCircle();}
-  if(tab==='rituals')renderRituals();
-  if(tab==='nudges')renderNudges();
+function setTabActive(tab){document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('active', t.dataset.tab===tab));}
+
+// re-render whatever view is on top of the stack
+function paint(){
+  const t=NAV[NAV.length-1];
+  switch(t.view){
+    case 'home': renderHome(); break;
+    case 'circle': renderCircle(); break;
+    case 'chat': renderChat(); break;
+    case 'rituals': renderRituals(); break;
+    case 'nudges': renderNudges(); break;
+    case 'settings': break;
+    case 'detail': renderDetail(t.ctx); break;
+    case 'thread': renderThread(t.ctx); break;
+    case 'group': renderGroup(t.ctx); break;
+    case 'tier': renderTier(t.ctx); break;
+    case 'edu': renderEdu(); break;
+  }
+  if(TABS.includes(t.view)) setTabActive(t.view);
+}
+function push(view, opts){
+  opts=opts||{};
+  const back = opts.backLabel!==undefined ? opts.backLabel : (NAV[NAV.length-1].label||'Back');
+  NAV.push({view, label:opts.label, backLabel:back, ctx:opts.ctx});
+  go(view); paint();
 }
 function goBack(){
-  // detail/back returns to circle (or wherever sensible)
-  switchTab(window._cameFrom||'circle');
+  if(NAV.length>1) NAV.pop();
+  const t=NAV[NAV.length-1];
+  go(t.view); paint();
 }
-let _cameFrom='circle';
-function openDetailWrap(id){_cameFrom='circle';openDetail(id);}
-function goDetailFromTab(){window._cameFrom=window._view;}
+function switchTab(tab){
+  NAV=[{view:tab, label:TAB_LABEL[tab]}];
+  if(tab==='circle') circleFilter='all';
+  go(tab); paint();
+  if(tab==='circle') syncSeg('circle-seg',0);
+}
 
-// override openDetail to record origin
-const _openDetail=openDetail;
-openDetail=function(id){ window._cameFrom = (window._view==='detail')?window._cameFrom:window._view; _openDetail(id); };
+/* open helpers — each pushes a view onto the stack */
+function openDetail(id){ const c=conn(id); push('detail',{label:c.name.split(' ')[0], ctx:id}); }
+function openThread(tid){ push('thread',{label:threadTitle(tid), ctx:tid}); }
+function openGroup(gid){ const g=GROUPS.find(x=>x.id===gid); push('group',{label:g?g.name:'Group', ctx:gid}); }
+function openTier(t){ push('tier',{label:TIER_NAME[t], ctx:t}); }
+function openEdu(){ push('edu',{label:'Dare to Choose'}); }
 
-function filterCircle(f, el){
+function filterCircle(f){
   circleFilter=f;
-  switchTab('circle');               // ensure circle tab visible
-  circleFilter=f;                    // re-set (switchTab reset it)
-  // sync segmented control
-  const idx={all:0,red:1,yellow:2,green:3}[f];
-  syncSeg('circle-seg',idx);
-  renderCircle();
+  if(NAV[NAV.length-1].view!=='circle'){ NAV=[{view:'circle',label:'Circle'}]; go('circle'); }
+  syncSeg('circle-seg',{all:0,red:1,yellow:2,green:3}[f]);
+  renderCircle(); setTabActive('circle');
 }
 function syncSeg(id,idx){const segs=document.querySelectorAll('#'+id+' button');segs.forEach((b,i)=>b.classList.toggle('on',i===idx));}
-function filterNudges(f, el){nudgeFilter=f;document.querySelectorAll('#nudge-seg button').forEach(b=>b.classList.remove('on'));el.classList.add('on');renderNudges();}
+function filterNudges(f, el){nudgeFilter=f;document.querySelectorAll('#nudge-seg button').forEach(b=>b.classList.remove('on'));if(el)el.classList.add('on');renderNudges();}
+
+/* ===== TIER VIEW (opened from a ring) ===== */
+function renderTier(tier){
+  const list=CONNECTIONS.filter(c=>c.tier===tier).sort((a,b)=>sevRank(a.status)-sevRank(b.status)||b.days-a.days);
+  const top=NAV[NAV.length-1];
+  document.getElementById('tier-back').textContent=(top&&top.backLabel)||'Home';
+  document.getElementById('tier-body').innerHTML=
+    `<div class="tier-hero t${tier}"><div class="th-emoji">${TIER_EMOJI[tier]}</div><div><div class="th-name">${TIER_NAME[tier]}</div><div class="th-sub">${TIER_DESC[tier]} · ${list.length} people</div></div></div>`
+    + list.map(connRow).join('');
+}
 
 /* =========================================================
    ACTIONS (channels, real-world, logging)
@@ -1381,6 +2010,195 @@ function sendThing(what){closeSheet();const n=currentConn?conn(currentConn).name
 
 function dismissNudge(id){const n=NUDGES.find(x=>x.id===id);if(n)n.status='dismissed';renderNudges();renderHome();toast('Nudge dismissed');}
 function snoozeNudge(id){const n=NUDGES.find(x=>x.id===id);if(n)n.status='snoozed';renderNudges();renderHome();toast('Snoozed — we’ll remind you in 3 days');}
+
+/* =========================================================
+   CHAT — "You Are My Chosen"
+   ========================================================= */
+function threadTitle(tid){
+  const th=THREADS.find(t=>t.id===tid); if(!th)return 'Chat';
+  if(th.kind==='dm') return conn(th.cid).name.split(' ')[0];
+  const g=GROUPS.find(x=>x.id===th.gid); return g?g.name:'Group';
+}
+function threadAvatar(th){
+  if(th.kind==='dm'){const c=conn(th.cid);return `<div class="avatar" style="width:50px;height:50px;background:${avColor(c.name)}">${initials(c.name)}<span class="statusdot sd-${c.status[0]}"></span></div>`;}
+  const g=GROUPS.find(x=>x.id===th.gid);
+  return `<div class="gtile" style="background:${grad('sage')}">${g?g.emoji:'👥'}</div>`;
+}
+function renderChat(){
+  const body=document.getElementById('chat-body');
+  const groupThreads=THREADS.filter(t=>t.kind==='group');
+  const dmThreads=THREADS.filter(t=>t.kind==='dm');
+  let html='';
+  const allT=groupThreads.find(t=>t.gid==='all');
+  if(allT){
+    const g=GROUPS.find(x=>x.id==='all'); const mem=groupMembers(g);
+    const minis=mem.slice(0,6).map(id=>miniAvatar(conn(id),28)).join('');
+    html+=`<div class="chat-hero" onclick="openThread('${allT.id}')">
+      <div class="gtile">🤍</div>
+      <div style="flex:1;min-width:0"><div class="nm">You Are My Chosen</div><div class="sub">${mem.length} people · ${escapeHTML(allT.last)}</div>
+        <div class="mini-row">${minis}</div></div>
+    </div>`;
+  }
+  const subs=groupThreads.filter(t=>t.gid!=='all');
+  html+=`<div class="section-label">Groups</div>`+subs.map(threadRow).join('');
+  html+=`<div class="thread-new" onclick="openSheet('sheet-newgroup')">＋ New group</div>`;
+  html+=`<div class="section-label">Direct</div>`+dmThreads.map(threadRow).join('');
+  body.innerHTML=html;
+}
+function threadRow(t){
+  return `<div class="thread-row" onclick="openThread('${t.id}')">
+    ${threadAvatar(t)}
+    <div class="info"><div class="nm">${threadTitle(t)}</div><div class="lastmsg">${escapeHTML(t.last)}</div></div>
+    <div class="when">${t.when}</div>
+  </div>`;
+}
+function renderThread(tid){
+  window.curThread=tid;
+  const th=THREADS.find(t=>t.id===tid); if(!th)return;
+  const top=NAV[NAV.length-1];
+  document.getElementById('thread-back').textContent=(top&&top.backLabel)||'Chat';
+  document.getElementById('thread-title').textContent=threadTitle(tid)+(th.kind==='group'?' ›':' ›');
+  const log=document.getElementById('thread-log');
+  const msgs=MESSAGES[tid]||[];
+  log.innerHTML = msgs.length ? msgs.map(m=>bubbleHTML(m,th)).join('')
+    : `<div class="chat-empty">${ICONS.msg}<div>Say something kind to ${threadTitle(tid)}.</div></div>`;
+  log.scrollTop=log.scrollHeight;
+}
+function threadTitleTap(){
+  const tid=window.curThread; const th=THREADS.find(t=>t.id===tid); if(!th)return;
+  if(th.kind==='group') openGroup(th.gid); else openDetail(th.cid);
+}
+function bubbleHTML(m, th){
+  const out=m.from==='me';
+  let inner;
+  if(m.kind==='gift'){ inner=`<div class="bub-gift"><div class="bg-thumb" style="background:${grad(m.gift.grad)}">${m.gift.emoji}</div><div><div class="bg-name">${escapeHTML(m.gift.name)}</div><div class="bg-sub">On its way 🎁 · ${m.gift.price}</div></div></div>`; }
+  else if(m.kind==='mem'){ inner=`<div class="bub-mem" style="background:${grad(m.grad)}"><div class="bm-emoji">${m.emoji}</div><div class="bm-cap">${escapeHTML(m.cap)}</div></div>`; }
+  else if(m.kind==='ritual'){ inner=`📅 ${escapeHTML(m.t)}`; }
+  else inner=escapeHTML(m.t);
+  let sender='';
+  if(!out && th.kind==='group'){ const c=conn(m.from); if(c) sender=`<div class="bub-sender">${miniAvatar(c,18)} ${c.name.split(' ')[0]}</div>`; }
+  return `<div class="bubrow ${out?'out':'in'}">${sender}<div class="bubble ${out?'out':'in'}">${inner}<span class="bub-when">${m.when||''}</span></div></div>`;
+}
+function pushMessage(tid, msg){
+  if(!MESSAGES[tid])MESSAGES[tid]=[];
+  MESSAGES[tid].push(msg);
+  const th=THREADS.find(t=>t.id===tid);
+  if(th){ th.last = msg.kind==='gift'?'You: 🎁 '+msg.gift.name : msg.kind==='mem'?'You: 🖼️ '+msg.cap : msg.kind==='ritual'?'You: 📅 ritual' : 'You: '+msg.t; th.when='now'; }
+}
+function sendMessage(){
+  const tid=window.curThread; if(!tid)return;
+  const inp=document.getElementById('composer-input'); const val=inp.value.trim(); if(!val)return;
+  pushMessage(tid,{from:'me',t:val,when:'now'}); inp.value=''; renderThread(tid);
+}
+function attachAction(kind){
+  const tid=window.curThread; const th=THREADS.find(t=>t.id===tid);
+  const recip = th && th.kind==='dm' ? th.cid : null;
+  if(kind==='flowers'){ openGiftFlow({cat:'flowers', thread:tid, recipient:recip}); }
+  else if(kind==='gift'){ openGiftFlow({thread:tid, recipient:recip}); }
+  else if(kind==='photo'){ closeSheet(); pushMessage(tid,{from:'me',kind:'mem',emoji:'📸',grad:'sky',cap:'Shared a photo',when:'now'}); renderThread(tid); toast('🖼️ Photo shared'); }
+  else if(kind==='ritual'){ closeSheet(); pushMessage(tid,{from:'me',kind:'ritual',t:'Proposed a weekly call ☕',when:'now'}); renderThread(tid); toast('📅 Ritual proposed'); }
+}
+
+/* ===== GROUP PROFILE ===== */
+function renderGroup(gid){
+  const g=GROUPS.find(x=>x.id===gid); if(!g)return;
+  const members=groupMembers(g).map(id=>conn(id)).filter(Boolean);
+  const top=NAV[NAV.length-1];
+  document.getElementById('group-back').textContent=(top&&top.backLabel)||'Chat';
+  document.getElementById('group-body').innerHTML=`
+    <div class="detail-hero">
+      <div class="av" style="background:${grad('sage')};font-size:42px;color:#fff">${g.emoji}</div>
+      <h2>${g.name}</h2>
+      <div class="meta">${members.length} people${g.sub?' · '+g.sub:''}</div>
+    </div>
+    <button class="btn btn-sage btn-block" style="margin:6px 0 2px" onclick="openThread('t-${gid}')">Open chat</button>
+    <div class="section-label">Members</div>
+    <div class="member-grid">${members.map(c=>`<div class="member" onclick="openDetail(${c.id})">${avatarHTML(c)}<div class="mn">${c.name.split(' ')[0]}</div></div>`).join('')}</div>
+    <div class="section-label">Shared memories <span class="more" onclick="openAddMemory('g${gid}')">＋ Add</span></div>
+    ${renderMemGrid(g.memories||[], 'g'+gid)}
+  `;
+}
+
+/* =========================================================
+   GIFT FLOW (curated, multi-step)
+   ========================================================= */
+let GIFT={step:1,cat:null,gift:null,recipient:null,msg:'',thread:null,seeded:false};
+function openGiftFlow(opts){
+  opts=opts||{}; closeSheet();
+  GIFT={step:1, cat:opts.cat||null, gift:null, recipient:(opts.recipient!=null?opts.recipient:(currentConn||null)), msg:'', thread:opts.thread||null, seeded:!!opts.cat};
+  if(GIFT.cat) GIFT.step=2;
+  document.getElementById('giftflow').classList.add('show');
+  giftRender();
+}
+function closeGift(){document.getElementById('giftflow').classList.remove('show');}
+function giftBack(){
+  if(GIFT.step<=1 || (GIFT.step===2 && GIFT.seeded)){ closeGift(); return; }
+  GIFT.step--; giftRender();
+}
+function giftRecipientName(){
+  if(GIFT.recipient!=null) return conn(GIFT.recipient).name.split(' ')[0];
+  if(GIFT.thread){ const th=THREADS.find(t=>t.id===GIFT.thread); if(th) return th.kind==='dm'?conn(th.cid).name.split(' ')[0]:threadTitle(GIFT.thread); }
+  return null;
+}
+function giftRender(){
+  document.getElementById('gf-steps').innerHTML=[1,2,3,4].map(s=>`<i class="${s<=GIFT.step?'on':''}"></i>`).join('');
+  document.getElementById('gf-title').textContent={1:'Choose a category',2:'Pick a gift',3:'Who & a note',4:'Confirm'}[GIFT.step];
+  const body=document.getElementById('gf-body'); const foot=document.getElementById('gf-foot');
+  if(GIFT.step===1){
+    body.innerHTML=`<div class="gift-grid">${GIFT_CATS.map(c=>`<div class="gift-cat" style="background:${grad(c.grad)}" onclick="giftPickCat('${c.id}')"><div class="gc-emoji">${c.emoji}</div><div class="gc-label">${c.label}</div></div>`).join('')}</div>`;
+    foot.innerHTML='';
+  } else if(GIFT.step===2){
+    body.innerHTML=GIFTS.filter(g=>g.cat===GIFT.cat).map(g=>`<div class="gift-card" onclick="giftPickProduct('${g.id}')"><div class="gp-thumb" style="background:${grad(g.grad)}">${g.emoji}</div><div class="gp-info"><div class="gp-name">${g.name}</div><div class="gp-via">via ${g.via}</div></div><div class="gp-price">${g.price}</div></div>`).join('');
+    foot.innerHTML='';
+  } else if(GIFT.step===3){
+    const rn=giftRecipientName();
+    const rec = rn ? `<div class="gift-card" style="cursor:default"><div class="gp-thumb" style="background:${grad('sage')};color:#fff">${rn[0]}</div><div class="gp-info"><div class="gp-name">${rn}</div><div class="gp-via">Recipient</div></div></div>`
+      : `<div class="gift-recipients">${CONNECTIONS.filter(c=>c.tier<=2).map(c=>`<div class="chip" onclick="giftPickRecipient(${c.id})">${c.name.split(' ')[0]}</div>`).join('')}</div>`;
+    body.innerHTML=`<div class="field"><label>Sending to</label>${rec}</div>
+      <div class="field"><label>Add a note</label><textarea class="input" id="gf-msg" placeholder="A few warm words…">${escapeHTML(GIFT.msg)}</textarea></div>`;
+    foot.innerHTML=`<button class="btn btn-sage btn-block" onclick="giftToReview()">Review order</button>`;
+  } else {
+    const g=GIFT.gift, rn=giftRecipientName()||'them';
+    body.innerHTML=`<div class="gift-summary"><div class="gs-thumb" style="background:${grad(g.grad)}">${g.emoji}</div><div><div class="gs-name">${g.name}</div><div class="gs-meta">${g.price} · via ${g.via}</div></div></div>
+      <div class="infogrid"><div class="infocell"><div class="k">To</div><div class="v">${rn}</div></div><div class="infocell"><div class="k">Delivery</div><div class="v">Next day</div></div></div>
+      ${GIFT.msg?`<div class="note-box" style="margin-top:14px"><div class="nh">Your note</div>${escapeHTML(GIFT.msg)}</div>`:''}`;
+    foot.innerHTML=`<button class="btn btn-sage btn-block" onclick="giftConfirm()">Place order · ${g.price}</button>`;
+  }
+}
+function giftPickCat(id){GIFT.cat=id;GIFT.step=2;giftRender();}
+function giftPickProduct(id){GIFT.gift=GIFTS.find(g=>g.id===id);GIFT.step=3;giftRender();}
+function giftPickRecipient(id){GIFT.recipient=id;giftRender();}
+function giftToReview(){const m=document.getElementById('gf-msg');if(m)GIFT.msg=m.value;GIFT.step=4;giftRender();}
+function giftConfirm(){
+  const rn=giftRecipientName()||'them'; const tid=GIFT.thread;
+  if(tid) pushMessage(tid,{from:'me',kind:'gift',gift:GIFT.gift,when:'now'});
+  closeGift();
+  toast(`🎁 ${GIFT.gift.name} on its way to ${rn}`);
+  if(tid && NAV[NAV.length-1].view==='thread') renderThread(tid);
+}
+
+/* =========================================================
+   EDUCATION MODULE (Dare to Choose · Våga välja)
+   ========================================================= */
+function renderEdu(){
+  const top=NAV[NAV.length-1];
+  document.getElementById('edu-back').textContent=(top&&top.backLabel)||'Settings';
+  const t={1:[],2:[],3:[]}; CONNECTIONS.forEach(c=>{if(t[c.tier])t[c.tier].push(c);});
+  document.getElementById('edu-body').innerHTML=`
+    <div class="edu-hero">
+      <div class="edu-eyebrow">Dare to Choose · Våga välja</div>
+      <h2 class="edu-h">Why only thirty?</h2>
+      <p class="edu-p">You can know hundreds of people — but you can only truly keep a handful close. Chosen asks you to do the brave, freeing thing: decide who your people are, and give them your attention on purpose.</p>
+    </div>
+    <div class="section-label">The research</div>
+    ${RESEARCH.map(r=>`<div class="research-card"><div class="rc-stat">${r.stat}</div><div class="rc-kicker">${r.kicker}</div><div class="rc-title">${r.title}</div><div class="rc-body">${r.body}</div></div>`).join('')}
+    <div class="section-label">Your circle today</div>
+    ${[1,2,3].map(tr=>`<div class="edu-tier"><div class="et-head"><b>${TIER_NAME[tr]}</b><span>${t[tr].length} chosen</span></div><div class="et-avs">${t[tr].map(c=>avatarHTML(c)).join('')}</div></div>`).join('')}
+    <div class="note-box" style="margin-top:6px"><div class="nh">The Chosen rule</div>Five who'd drop everything. Ten you lean on. Fifteen you'd hate to lose. Everyone else is welcome — but these thirty get your attention.</div>
+    <button class="btn btn-sage btn-block" style="margin-top:14px" onclick="restartOnboarding(4)">Re-run the sort</button>
+    <div style="height:12px"></div>
+  `;
+}
 
 /* =========================================================
    SHEETS
@@ -1395,6 +2213,7 @@ function openSheet(id, ctx){
     else{['f-name','f-notes','f-bday'].forEach(i=>document.getElementById(i).value='');}
   }
   if(id==='sheet-ritual'){buildWhoChips('r-who');}
+  if(id==='sheet-newgroup'){document.getElementById('ng-who').innerHTML=CONNECTIONS.slice(0,9).map(c=>`<div class="chip" onclick="pickMany(this)">${c.name.split(' ')[0]}</div>`).join('');}
   document.getElementById('scrim').classList.add('show');
   document.getElementById(id).classList.add('show');
 }
@@ -1410,8 +2229,7 @@ function saveLog(){
   if(c){c.days=0;c.status='green';}
   closeSheet();
   toast(`✓ Logged — ${c?c.name.split(' ')[0]:'they'} is back to 🟢 Green`);
-  renderHome();renderCircle();
-  if(window._view==='detail')openDetail(id);
+  paint(); // refresh whatever view is on top (detail / circle / home)
 }
 
 /* =========================================================
@@ -1447,44 +2265,70 @@ function toast(msg){
 }
 
 /* =========================================================
-   ONBOARDING
+   ONBOARDING / EDUCATION (Dare to Choose · Våga välja)
    ========================================================= */
-let obSel=new Set();
+let obTier={};   // name -> chosen tier during the guided sort
+function obDots(){
+  document.querySelectorAll('#onboard .ob-dots').forEach(d=>{
+    const idx=+d.dataset.dots;
+    d.innerHTML=[0,1,2,3,4,5].map(i=>`<i class="${i===idx?'on':''}"></i>`).join('');
+  });
+}
 function obNext(step){
   document.querySelectorAll('.ob-screen').forEach(s=>s.classList.remove('active'));
-  document.querySelector('.ob-screen[data-ob="'+step+'"]').classList.add('active');
-  if(step===2)buildObPicks();
-  if(step===3)buildObRitualWho();
+  const scr=document.querySelector('.ob-screen[data-ob="'+step+'"]'); if(scr)scr.classList.add('active');
+  const sc=scr&&scr.querySelector('.ob-scroll'); if(sc)sc.scrollTop=0;
+  if(step===3)buildObResearch();
+  if(step===4)buildObSort();
+  if(step===5)buildObRitualWho();
 }
-function buildObPicks(){
-  document.getElementById('ob-picks').innerHTML = OB_SUGGEST.map(n=>`
-    <div class="pick ${obSel.has(n)?'sel':''}" onclick="toggleObPick(this,'${n}')">
-      <div class="avatar" style="width:42px;height:42px;font-size:14px;background:${avColor(n)}">${initials(n)}</div>
-      <div class="info"><div class="nm">${n}</div><div class="sub">In your contacts</div></div>
-      <div class="check">${ICONS.check}</div>
-    </div>`).join('');
-  updateObCount();
+function buildObResearch(){
+  document.getElementById('ob-research').innerHTML=RESEARCH.map(r=>`<div class="research-card"><div class="rc-stat">${r.stat}</div><div class="rc-kicker">${r.kicker}</div><div class="rc-title">${r.title}</div><div class="rc-body">${r.body}</div></div>`).join('');
 }
-function toggleObPick(el,n){el.classList.toggle('sel');if(obSel.has(n))obSel.delete(n);else obSel.add(n);updateObCount();}
-function updateObCount(){document.getElementById('ob-count').textContent=obSel.size;document.getElementById('ob-cta-n').textContent=obSel.size;document.getElementById('ob-cta').innerHTML= obSel.size? 'Add '+obSel.size+' people':'Continue';}
+function tierForName(n){const c=CONNECTIONS.find(c=>c.name===n);return c?c.tier:0;}
+function buildObSort(){
+  document.getElementById('ob-sort').innerHTML=OB_SORT.map(obSortRow).join('');
+  updateObSortCounts();
+}
+function obSortRow(n){
+  const cur=obTier[n]!=null?obTier[n]:tierForName(n);
+  const labels={1:'Inner',2:'Mid',3:'Outer'};
+  const safe=n.replace(/'/g,"\\'");
+  return `<div class="tier-sort-row">
+    <div class="avatar" style="width:38px;height:38px;font-size:13px;background:${avColor(n)}">${initials(n)}</div>
+    <div class="tsr-name">${n}</div>
+    <div class="tier-seg">${[1,2,3].map(t=>`<button class="${cur===t?'on t'+t:''}" onclick="setObTier('${safe}',${t})">${labels[t]}</button>`).join('')}</div>
+  </div>`;
+}
+function setObTier(n,t){ obTier[n]=t; buildObSort(); }
+function updateObSortCounts(){
+  const cnt={1:0,2:0,3:0};
+  OB_SORT.forEach(n=>{const t=obTier[n]!=null?obTier[n]:tierForName(n);if(cnt[t]!=null)cnt[t]++;});
+  const goal={1:5,2:10,3:15};
+  document.getElementById('ob-tier-counts').innerHTML=[1,2,3].map(t=>`<div class="tc ${cnt[t]>=goal[t]?'full':''}"><b>${cnt[t]}/${goal[t]}</b>${TIER_NAME[t].split(' ')[0]}</div>`).join('');
+}
 function buildObRitualWho(){document.getElementById('ob-ritual-who').innerHTML=['Mom','Lena','Daniel'].map((n,i)=>`<div class="chip ${i===0?'sel':''}" onclick="pickOne(this,'ob-ritual-who')">${n}</div>`).join('');}
+function applyObTiers(){ Object.keys(obTier).forEach(n=>{const c=CONNECTIONS.find(c=>c.name===n); if(c)c.tier=obTier[n];}); }
 function finishOnboarding(){
-  document.getElementById('onboard').style.transition='opacity .4s, transform .4s';
-  document.getElementById('onboard').style.opacity='0';
-  document.getElementById('onboard').style.transform='scale(1.04)';
-  setTimeout(()=>{document.getElementById('onboard').style.display='none';},400);
+  applyObTiers();
+  const ob=document.getElementById('onboard');
+  ob.style.transition='opacity .4s, transform .4s';
+  ob.style.opacity='0'; ob.style.transform='scale(1.04)';
+  setTimeout(()=>{ob.style.display='none';ob.style.opacity='';ob.style.transform='';},400);
   switchTab('home');
 }
-function restartOnboarding(){
+function restartOnboarding(jump){
+  obTier={};
   const ob=document.getElementById('onboard');
-  ob.style.display='flex';ob.style.opacity='1';ob.style.transform='none';
-  document.querySelectorAll('.ob-screen').forEach(s=>s.classList.remove('active'));
-  document.querySelector('.ob-screen[data-ob="0"]').classList.add('active');
+  ob.style.display='flex'; ob.style.opacity='1'; ob.style.transform='none';
+  obDots();
+  obNext(typeof jump==='number'?jump:0);
 }
 
 /* =========================================================
    INIT
    ========================================================= */
+obDots();
 renderHome();
 </script>
 </body>
